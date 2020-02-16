@@ -1,0 +1,327 @@
+.main-header {
+    height: 60px;
+    background: #0288D1 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 2px #00000021;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.left-panel {
+    width: 81px;
+    height: 100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 5px 0px 10px #00000029;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-panel img {
+    width: 24px;
+    height: 23px;
+}
+
+.dash {
+    letter-spacing: 0.36px;
+    color: #0288D1;
+    font-size: 36px;
+    margin-top: 30px;
+}
+
+.recived {
+    margin: 45px 0 38px 0;
+}
+
+.box-shadow-menu {
+    position: relative;
+    padding-left: 1.25em;
+}
+.box-shadow-menu:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    width: 22px;
+    height: 3px;
+    background: #ffffff;
+    box-shadow: 0 7px 0 0 #ffffff, 0 14px 0 0 #ffffff;  
+}
+
+.profile {
+    padding: 13px 29px 13px 24px;
+}
+
+.profile-pic {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.message-search {
+    width: 560px;
+    height: 34px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.5px solid #BBBBBB;
+    padding: 9px 0 9px 14px;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.12px;
+    color: #707070;
+}
+
+.message-search-box {
+    display: flex;
+    margin-bottom: 18px;
+}
+
+.message-search-btn {
+    width: 85px;
+    height: 34px;
+    background: #0288D1 0% 0% no-repeat padding-box;
+    border-style: none;
+}
+
+.message-search-btn img {
+    width: 23px;
+    height: 23px;
+}
+
+.announcemnent-subject-box, .announcemnent-message-box {
+    box-shadow: 0px 1px 2px #00000021;
+    border-radius: 2px;
+    width: 645px;
+    height: 60px;
+    margin-bottom: 1px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.announcemnent-subject-box h4 {
+    letter-spacing: 0;
+    color: #0288D1;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.announcemnent-subject-box p {
+    letter-spacing: 0;
+    color: #03A9F4;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Roboto';
+}
+
+.message-box {
+    margin: 24px 0 0 123px;
+    
+}
+
+.announcemnent-message-box h4 {
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 500;
+    color: #212121;
+}
+
+.announcemnent-message-box p {
+    color: #727272;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.flag {
+    width: 4px;
+    height: 60px;
+    background: #FC4349 0% 0% no-repeat padding-box;
+}
+
+.announcemnent-message-box {
+    display: flex;
+}
+
+.sms-box, .announcemnent-subject-box {
+    padding: 8px 0 14px 15px;
+}
+
+.message-list {
+    max-height: 500px;
+    overflow: scroll;
+}
+
+.conversation-box {
+    width: 310px;
+    height: 337px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 4px #00000014;
+    border-radius: 2px;
+    margin: 24px 0 0 70px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.conversation-subject-box {
+    width: 310px;
+    height: 60px;
+    background: #03A9F4 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 2px #00000021;
+    border-radius: 2px 2px 0px 0px;
+    padding: 7px 0 0 14px;
+}
+
+.conversation-subject-box h4 {
+    font-size: 18px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.conversation-subject-box p {
+    font-size: 12px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: #B3E5FC;
+    margin-top: 3px;
+}
+
+.conversation-search-box {
+    display: flex;
+    justify-content: center;
+}
+
+.conversation-search {
+    width: 300px;
+    height: 24px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.5px solid #BBBBBB;
+    position: relative;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+    letter-spacing: 0.12px;
+    color: #707070;
+    font-size: 12px;
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 153px;
+    left: 1122px;
+}
+
+.contact-list {
+    width: 310px;
+    height: 55px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 4px #00000014;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-evenly;;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.message-content h4 {
+    color: #212121;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.message-content p {
+    color: #727272;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.message-content small {
+    color: #B6B6B6;
+    font-size: 10px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.chat-window {
+    width: 253px;
+    height: 198px;
+    box-shadow: 0px 2px 4px #00000014;
+    border: 1px solid #E0E0E0;
+    position: fixed;
+    bottom: 1px;
+    right: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 42px;
+    height: 42px;
+    margin: 9px 13px 0 9px;
+}
+
+.divider {
+    width: 189px;
+    height: 1px;
+    background: #E0E0E0 0% 0% no-repeat padding-box;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user h4{
+    color: #212121;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.send-message {
+    position: relative;
+}
+
+.send-message input {
+    width: 241px;
+    height: 24px;
+    background: #DADADA 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    border-style: none;
+    padding-left: 8px;
+    color: #B6B9C3;
+    font-size: 13px;
+    font-family: 'Gotham';
+    font-weight: 500;
+}
+
+.send-message-icon {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    cursor: pointer;
+}
+

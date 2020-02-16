@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Oxygen', 'Roboto', sans-serif;
+    text-rendering: optimizeLegibility; /* This will make fonts rendering in a perfect way */
+}
+
+body {
+    background: transparent url('/assets/images/MainBG.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
