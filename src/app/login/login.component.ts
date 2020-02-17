@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FirebaseService, AuthResponseData } from '../services/fireBase/firebase.service';
+import { Router } from '@angular/router';
+import {first} from 'rxjs/operators';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-login',
@@ -7,9 +13,52 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  errorMessage='';
+  loginForm: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private firebase: FirebaseService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
+    this.loginForm = this.formBuilder.group(
+      {
+        email: ['', [Validators.required]],
+        password: ['', [Validators.required]],
+        language: ['']
+      }
+    );
   }
+
+  onSubmitLogin() {
+    if(!this.loginForm.valid) {
+      return;
+    }
+
+    const email = this.loginForm.value.email;
+    const password = this.loginForm.value.password;
+
+    let authObs: Observable<AuthResponseData>;
+
+    authObs = this.firebase.login(email, password);
+
+    authObs.subscribe(
+      resData => {
+          this.router.navigate(['/messages']);
+      },
+      errorMessage => {
+        this.errorMessage = errorMessage;
+        setTimeout(() => this.errorMessage = '', 4000);
+
+      }
+    );
+
+    this.loginForm.reset();
+  }
+
+    
+
 
 }

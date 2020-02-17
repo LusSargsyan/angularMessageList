@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../services/fireBase/firebase.service';
 
 @Component({
   selector: 'app-messages',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private firebase: FirebaseService) { }
 
   ngOnInit() {
+  }
+
+  onLogout() {
+    this.firebase.logout();
   }
 
 }

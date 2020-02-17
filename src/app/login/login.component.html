@@ -3,16 +3,32 @@
         <span class="login-header">Log In</span>
         <!-- login form -->
   
-        <form class="login-form">
-          <input type="email" autofocus placeholder="Email" name="email" class="login-input" required>
-          <input type="password" placeholder="Password" name="password" class="login-input" minlength="6"
-                 required>
-                 <select name="language" class="language">
-                    <option value="english">English</option>
-                    <option value="russian">Russian</option>
-                    <option value="armenian">Armenian</option>
-                 </select>
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+          <input 
+            type="email" 
+            placeholder="Email" 
+            name="email" 
+            class="login-input" 
+            formControlName="email"
+            autofocus 
+            required
+          >
+          <input 
+            type="password" 
+            placeholder="Password" 
+            name="password" 
+            class="login-input" 
+            minlength="6"
+            required
+            formControlName="password"
+          >
+          <select name="language" class="language" formControlName="language">
+            <option value="english">English</option>
+            <option value="russian">Russian</option>
+            <option value="armenian">Armenian</option>
+          </select>
           <input type="submit" name="submit" value="Log In" class="login-btn">
         </form>
       </main>
+      <app-error [message]="errorMessage"></app-error>
 </div>

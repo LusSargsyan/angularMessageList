@@ -3,11 +3,39 @@
         <span class="signup-header">Registration</span>
         <!-- signup form -->
   
-        <form class="signup-form">
-          <input type="email" autofocus placeholder="Email" name="email" class="signup-input" required>
-          <input type="password" placeholder="Password" name="password" class="signup-input" minlength="6" required>
-          <input type="password" placeholder="Repeat Password" name="password-repeat" class="signup-input" minlength="6" required>
-          <input type="submit" name="submit" value="Confirm" class="signup-btn">
+        <form class="signup-form" [formGroup]="signupForm" (ngSubmit)="onSubmitSignUp()">
+          <input 
+            type="email" 
+            placeholder="Email" 
+            name="email" 
+            formControlName="email"
+            class="signup-input" 
+            autofocus
+            [ngClass]="{'error' : !signupForm.get('email').valid && signupForm.get('email').touched}"
+          >
+          <input 
+            type="password" 
+            placeholder="Password" 
+            name="password" 
+            class="signup-input" 
+            formControlName="password"
+            [ngClass]="{'error' : !signupForm.get('password').valid && signupForm.get('password').touched}"
+          >
+          <input 
+            type="password" 
+            placeholder="Repeat Password" 
+            name="confirmPassword" 
+            class="signup-input" 
+            formControlName="confirmPassword"
+            [ngClass]="{'error' : !signupForm.get('confirmPassword').valid && signupForm.get('confirmPassword').touched}"
+          >
+          <input 
+            type="submit" 
+            name="submit" 
+            value="Confirm" 
+            class="signup-btn" 
+            [disabled]="!signupForm.valid">
         </form>
       </main>
+      <app-error [message]="errorMessage"></app-error>
 </div>
