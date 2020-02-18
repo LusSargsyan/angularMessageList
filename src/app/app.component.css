@@ -1,0 +1,68 @@
+.main-header {
+    height: 60px;
+    background: #0288D1 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 2px #00000021;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.left-panel {
+    width: 81px;
+    height: 100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 5px 0px 10px #00000029;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-panel img {
+    width: 24px;
+    height: 23px;
+}
+
+.dash {
+    letter-spacing: 0.36px;
+    color: #0288D1;
+    font-size: 36px;
+    margin-top: 30px;
+}
+
+.recived {
+    margin: 45px 0 38px 0;
+}
+
+.box-shadow-menu {
+    position: relative;
+    padding-left: 1.25em;
+}
+.box-shadow-menu:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    width: 22px;
+    height: 3px;
+    background: #ffffff;
+    box-shadow: 0 7px 0 0 #ffffff, 0 14px 0 0 #ffffff;  
+}
+
+.profile {
+    padding: 13px 29px 13px 24px;
+}
+
+.profile-pic {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.logout {
+    cursor: pointer;
+    color: white;
+    margin-right: 20px;
+}

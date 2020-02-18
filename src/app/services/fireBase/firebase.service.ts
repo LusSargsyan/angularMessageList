@@ -61,8 +61,35 @@ export class FirebaseService {
         }));
     }
 
+    autoLogin() {
+        const userData: {
+            email: string,
+            id: string,
+            _token: string,
+            _tokenExpirationDate: string
+        } = JSON.parse(localStorage.getItem('userData'));
+
+        if (!userData) {
+            return;
+        }
+
+        const loadedUser = new User(userData.email, userData.id, userData._token, new Date(userData._tokenExpirationDate));
+
+        console.log(loadedUser);
+        if (loadedUser.token) {
+            this.user.next(loadedUser);
+            const expirationDuration = new Date(userData._tokenExpirationDate).getTime() - new Date().getTime();
+            this.autoLogOut(expirationDuration);
+        }
+    }
+
+    autoLogOut(expirationDuration: number) {
+        this.expirationTimer = setTimeout(() => {
+            this.logout();
+        }, expirationDuration);
+    }
+
     logout() {
-      debugger
         this.user.next(null);
         this.router.navigate(['/login']);
         localStorage.removeItem('userData');

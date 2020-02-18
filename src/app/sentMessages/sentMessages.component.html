@@ -1,0 +1,64 @@
+<div class="main-content">
+    <div class="message-box">
+        <div class="message-search-box">
+            <input class="message-search" placeholder="Search" type="text" [(ngModel)]="pattern" (input)="search()">
+            <button class="message-search-btn" type="submit">
+                <img src="../../assets/images/search.png" alt="">
+            </button>
+        </div>
+        <div class="announcemnent-subject-box">
+            <h4>Announcemnent</h4>
+            <p class="from">From your Principal or Teachers</p>
+        </div>
+        <div class="message-list">
+
+            <div class="announcemnent-message-box" *ngFor="let sentMessage of sentMessages">
+                <div class="flag"></div>
+                <div class="sms-box">
+                    <h4>{{ sentMessage.name }}</h4>
+                    <p>{{ sentMessage.message }}</p>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <div class="conversation-box">
+        <div class="conversation-subject-box">
+            <h4>Messages</h4>
+            <p>Current Conversations</p>
+        </div>  
+        <div class="conversation-search-box">
+            <input type="text" class="conversation-search" placeholder="Search"  (input)="searchInContactList($event)">
+            <img class="search-icon" src="../../assets/images/search@2x.png" alt="">
+        </div>  
+        <div class="contact-list" *ngFor="let contact of contactList" (click)="openChatBox(contact)">
+            <div class="profile-img">
+                <img class="avatar" src="../../assets/images/{{contact.image}}.png" alt="">
+            </div>
+            <div class="message-content">
+                <h4 class="name">
+                    {{contact.name}}
+                </h4>
+                <p class="text">
+                    {{contact.message}}
+                </p>
+                <small class="date">
+                    Just now
+                </small>
+            </div>
+        </div>   
+    </div>
+    <div class="chat-window" *ngIf="isChatBoxOpen">
+        <div class="user">
+            <img src="../../assets/images/{{chatOwnerData.image}}.png" alt="" class="user-avatar">
+            <div>
+                <h4 class="user-name">{{chatOwnerData.name}}</h4>
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="send-message">
+            <input type="text" placeholder="Message {{chatOwnerData.name}}" #input>
+            <button type="submit" (click)="sendMessage(input.value)" ><img class="send-message-icon" src="../../assets/images/sent@2x.png" alt=""></button>
+        </div>
+    </div>
+</div>

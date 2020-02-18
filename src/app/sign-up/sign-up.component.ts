@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder, AbstractControl } from '@angular/forms';
 import { FirebaseService, AuthResponseData } from '../services/fireBase/firebase.service';
 import { Router } from '@angular/router';
-import {first} from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -59,7 +58,7 @@ export class SignUpComponent implements OnInit {
 
     authObs.subscribe(
       resData => {
-          this.router.navigate(['/messages']);
+          this.router.navigate(['/recivedMessages']);
       },
       errorMessage => {
         this.errorMessage = errorMessage;

@@ -2,14 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { MessagesComponent } from './messages/messages.component';
+import { SentMessagesComponent } from './sentMessages/sentMessages.component';
 import { AuthGuard } from './guards/auth.guard';
+import { RecivedMessagesComponent } from './recived-messages/recived-messages.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/messages', pathMatch: 'full' },
+  {path: '', redirectTo: '/recivedMessages', pathMatch: 'full' },
   {path: 'login', component: LoginComponent },
   {path: 'signUp', component: SignUpComponent },
-  {path: 'messages', component: MessagesComponent, canActivate: [AuthGuard]},
+  {path: 'sentMessages', component: SentMessagesComponent, canActivate: [AuthGuard]},
+  {path: 'recivedMessages', component: RecivedMessagesComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({

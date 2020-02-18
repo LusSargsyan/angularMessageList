@@ -9,19 +9,31 @@
   <title>Document</title>
 </head>
 <body>
-  <!-- <header class="header">
-    
 
-    <div class="mode">
-      <span class="toggle-text">Light</span> 
-      <label for="mode" class="switch">
-        <input type="radio" name="mode">
-        <span class="toggle-switch round"></span>
-      </label>
-      <span class="toggle-text">Dark</span> 
-    </div>
-  </header> -->
   <main class="main-container">
+      <header class="main-header" *ngIf="isAuthenticated">
+          <div class="box-shadow-menu"></div>
+          <div class="profile">
+              <img class="profile-pic" src="../../assets/images/profile-pic.png" alt="">
+          </div>
+          <div>
+              <a class="logout" (click)="onLogout()">Logout</a>   
+          </div>
+      </header>
+      <div class="left-panel" *ngIf="isAuthenticated">
+          <span class="dash">D</span>
+          <span class="recived">
+              <a href="" routerLink="recivedMessages">
+                  <img src="../../assets/images/Receive@2x.png" alt="">
+              </a>
+          </span>
+          <span class="sent">
+              <a href="" routerLink="sentMessages">
+                  <img src="../../assets/images/sent@2x.png" alt="">
+              </a>
+          </span>
+          
+      </div>
       <router-outlet></router-outlet>
   </main>
   <footer class="footer">

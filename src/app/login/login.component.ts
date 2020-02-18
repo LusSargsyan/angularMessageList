@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginComponent implements OnInit {
 
-  errorMessage='';
+  errorMessage = '';
   loginForm: FormGroup;
 
   constructor(
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
 
     authObs.subscribe(
       resData => {
-          this.router.navigate(['/messages']);
+          this.router.navigate(['/recivedMessages']);
       },
       errorMessage => {
         this.errorMessage = errorMessage;
