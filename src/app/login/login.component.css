@@ -51,7 +51,6 @@
     color: #707070;
     letter-spacing: 0.5px;
     font-weight: 300;
-    -webkit-appearance: none;
 }
 
 .login-btn {
@@ -74,4 +73,42 @@
     text-decoration: none;
     color: #0288D1;
 }
+
+.container {
+    position: relative;
+}
+.left-rec {
+    position: absolute;
+    left: 625px;
+    top: 350px;
+}
+
+.left-line {
+    position: absolute;
+    left: 600px;
+    top: 350px;
+}
+
+.right-rec {
+    position: absolute;
+    left: 1300px;
+    top: 100px;
+}
+
+.right-line {
+    position: absolute;
+    left: 1300px;
+    top: 90px;
+}
+
+.account {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.account a{
+    color: #3e9ad7;
+}
+
+
 

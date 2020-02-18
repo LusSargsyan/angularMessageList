@@ -22,13 +22,18 @@
             required
             formControlName="password"
           >
-          <select name="language" class="language" formControlName="language">
+          <select name="language" class="language">
             <option value="english">English</option>
             <option value="russian">Russian</option>
             <option value="armenian">Armenian</option>
           </select>
           <input type="submit" name="submit" value="Log In" class="login-btn">
         </form>
+        <small class="account">Don't have an account? <a routerLink="/signUp">Sign Up</a></small>
       </main>
+      <img class="left-line" src="../../assets/images/Rectangle 210@2x.png" alt="">
+      <img class="left-rec" src="../../assets/images/Rectangle 209@2x.png" alt="">
+      <img class="right-rec" src="../../assets/images/Rectangle 211@2x.png" alt="">
+      <img class="right-line" src="../../assets/images/Rectangle 212@2x.png" alt="">
       <app-error [message]="errorMessage"></app-error>
 </div>

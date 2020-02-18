@@ -13,7 +13,7 @@
     height: 100%;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 5px 0px 10px #00000029;
-    position: absolute;
+    position: fixed;
     top: 0px;
     display: flex;
     flex-direction: column;
@@ -65,4 +65,8 @@
     cursor: pointer;
     color: white;
     margin-right: 20px;
+}
+
+.active-link svg {
+    fill: #3e9ad7;
 }

@@ -20,6 +20,9 @@
     height: 34px;
     background: #0288D1 0% 0% no-repeat padding-box;
     border-style: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .message-search-btn img {
@@ -55,7 +58,6 @@
 
 .message-box {
     margin: 24px 0 0 123px;
-    
 }
 
 .announcemnent-message-box h4 {

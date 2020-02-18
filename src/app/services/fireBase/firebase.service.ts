@@ -107,7 +107,6 @@ export class FirebaseService {
         token: string,
         expiresIn: number
     ) {
-      debugger;
 
         const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
         const user = new User(email, userId, token, expirationDate);
